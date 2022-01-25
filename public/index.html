@@ -1,43 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<link href="https://unpkg.com/grapesjs@0.14.62/dist/css/grapes.min.css" rel="stylesheet"></link>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<style>
+  body {
+    margin: 0;
+  }
+</style>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<div id="gjs" style="height:100%; overflow:hidden">
+  <mj-body>
+    <!-- Company Header -->
+    <mj-section background-color="#f0f0f0">
+      <mj-column>
+        <mj-text font-style="italic" font-size="20" color="#626262">
+          My Company
+        </mj-text>
+      </mj-column>
+    </mj-section>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>
+    <!-- Image Header -->
+    <mj-section background-url="http://1.bp.blogspot.com/-TPrfhxbYpDY/Uh3Refzk02I/AAAAAAAALw8/5sUJ0UUGYuw/s1600/New+York+in+The+1960's+-+70's+(2).jpg"
+                background-size="cover" background-repeat="no-repeat">
+      <mj-column>
+        <mj-text align="center" color="#fff" font-size="40" font-family="Helvetica Neue">Slogan here</mj-text>
+        <mj-button background-color="#F63A4D" href="#">
+          Promotion
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Intro text -->
+    <mj-section background-color="#fafafa">
+      <mj-column width="400">
+        <mj-text font-style="italic" font-size="20" font-family="Helvetica Neue" color="#626262">My Awesome Text</mj-text>
+        <mj-text color="#525252">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum enim eget magna efficitur, eu semper augue semper.
+          Aliquam erat volutpat. Cras id dui lectus. Vestibulum sed finibus lectus, sit amet suscipit nibh. Proin nec commodo purus.
+          Sed eget nulla elit. Nulla aliquet mollis faucibus.
+        </mj-text>
+        <mj-button background-color="#F45E43" href="#">Learn more</mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Side image -->
+    <mj-section background-color="white">
+      <mj-column>
+        <mj-image width="200" src="https://designspell.files.wordpress.com/2012/01/sciolino-paris-bw.jpg" />
+      </mj-column>
+      <mj-column>
+        <mj-text font-style="italic" font-size="20" font-family="Helvetica Neue" color="#626262">
+          Find amazing places
+        </mj-text>
+        <mj-text color="#525252">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin rutrum enim eget magna efficitur, eu semper augue semper.
+          Aliquam erat volutpat. Cras id dui lectus. Vestibulum sed finibus lectus.</mj-text>
+      </mj-column>
+    </mj-section>
+
+
+    <!-- Icons -->
+    <mj-section background-color="#fbfbfb">
+      <mj-column>
+        <mj-image width="100" src="http://191n.mj.am/img/191n/3s/x0l.png" />
+      </mj-column>
+      <mj-column>
+        <mj-image width="100" src="http://191n.mj.am/img/191n/3s/x01.png" />
+      </mj-column>
+      <mj-column>
+        <mj-image width="100" src="http://191n.mj.am/img/191n/3s/x0s.png" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section background-color="#e7e7e7">
+      <mj-column>
+        <mj-button href="#">Hello There!</mj-button>
+        <mj-social display="facebook twitter" />
+      </mj-column>
+    </mj-section>
+    <!-- Footer -->
+  </mj-body>
+</div>

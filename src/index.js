@@ -1,17 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import grapesjs from 'grapesjs';
+import Basics from 'grapesjs-blocks-basic';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import BaseReactComponent from './base-react-component';
+import ReactComponents from './react-components';
+import MuiComponents from './mui-components';
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const editor = grapesjs.init({
+    container: '#gjs',
+    height: '100%',
+    storageManager: false,
+    noticeOnUnload: false,
+    plugins: [Basics, BaseReactComponent, ReactComponents, MuiComponents]
+});
+
+editor.setComponents(`
+<div>
+  <span>
+    Foo
+  </span>
+  <Listing>
+    <div>
+      Bar
+    </div>
+    <MuiButton variant='contained' color='primary'>
+      Click Me
+    </MuiButton>
+    <Slider />
+  </Listing>
+  <Snackbar>
+    <MuiButton variant='contained' color='secondary'>
+      Click Me
+    </MuiButton>
+  </Snackbar>
+  <Slider />
+</div>
+`);
